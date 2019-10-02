@@ -1,0 +1,52 @@
+ 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background : linear-gradient(90deg ,rgb(238,246,255) 50% , rgb(82,177,255) 50%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.login-card{
+    display:flex;
+    justify-content: flex-start;
+    width:800px;
+    height:400px;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+    border-radius : 30px;
+    background-color: #fff;
+    opacity: 0.85;
+    padding: 15px;
+}
+
+.login_img{
+    height:250px;
+}
+
+.account,
+.image{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    text-align: center;
+}
+
+.login_form>div{
+    margin: 25px;
+}
+
+.login_form>:first-child{
+    margin-bottom: 0px;
+}
+
+.alredy-acc{
+    margin-right: 25px;
+}
+
+.Nolink:hover {
+    text-decoration: none;
+}

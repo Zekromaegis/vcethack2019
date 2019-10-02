@@ -1,0 +1,295 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*---------CSS Reset--------*/
+
+
+
+body{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    
+}
+main.grid-container{
+    background-color: rgb(246,248,248);
+}
+
+.card-title{
+    font-weight: 500;
+}
+
+/*Test*/
+/*Navbar*/
+.vertical-menu {
+    width: 5%; /* Set a width if you like */
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgb(222, 230, 230);
+    overflow-x: hidden;
+}
+
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height:550px;
+}
+  
+.menu-container a { /* Grey background color */
+    color: rgb(198,198,198); /* Black text color */
+    display: block; /* Make the links appear below each other */
+    text-decoration: none; /* Remove underline from links */
+}
+  
+.menu-container a i{
+    font-size: 24px;
+}
+
+.menu-container a img{
+    height: 36px;
+}
+
+.menu-container a:hover {
+    background-color: white;
+    color: rgb(250,180,180) /* Dark grey background on mouse-over */
+}
+  
+.menu-container a .active {
+    background-color: white; /* Add a green color to the "active/current" link */
+    color: rgb(253,165,137);
+}
+  
+
+/*Main*/
+/*Creation of Grid*/
+main.grid-container{
+    display: grid;
+    column-gap: 45px;
+    grid-template-columns: 1fr 15fr; 
+    grid-template-rows: auto;
+}
+
+/*Flexbox*/
+
+
+.academics_numeric,
+.sports_numeric,
+.technical_numeric,
+.social_numeric{
+    width : 20%;
+    height: 220px;
+}
+.icon{
+    height : 40px;
+    width : 40px;
+    border-radius : 50%;
+    display : inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.academics_icon{
+    color : rgb(15,135,254);
+    background-color : rgb(223,244,254);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.data_numeric{
+    font-size : 40px;
+}
+
+.sports_icon{
+    background-color : rgb(243,241,255);
+    color : rgb(145,117,254);
+}
+
+.technical_icon{
+    color : rgb(252,199,62);
+    background-color : rgb(252,249,235);
+}
+
+.social_icon{
+    color : rgb(70,209,78);
+    background-color : rgb(240,246,235);
+}
+
+/* Homepage Grid*/
+.Academics-ovr,
+.Home-ovr,
+.Sports-ovr,
+.Technical-ovr,
+.Social-ovr{
+    padding: 40px;
+    margin-right: 25px;
+}
+.card{
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    transition: 0.3s;
+    border-radius: 10px; 
+}
+
+.card img{
+    height: 175px;
+}
+
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+}
+
+.card-title{
+    text-align : center;
+    font-size : 30px;
+}
+
+.card-body{
+    padding: 2px 16px;
+    text-align: center;
+}
+
+#comp{
+    margin-right:auto;
+}
+
+/*Sub-Grid*/
+.home-container .edit{
+    margin-right: 25px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit button{
+    margin : 15px;
+    padding: 10px 5px;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(253,165,137); 
+    border: 1px solid plum;
+    border-radius: 25px;
+}
+
+.flex-container{
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+.home-container>.section-grid-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(5,1fr);
+    row-gap: 80px;
+    grid-template-areas:
+        "Home Home-ovr"
+        "Academics Academics-ovr"
+        "Sports Sports-ovr"
+        "Technical Technical-ovr"
+        "Social Social-ovr";
+}
+
+.home-container>.flex-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.sub-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 30px;
+    height: 700px;
+    overflow: auto;
+    row-gap: 40px;
+}
+
+.sub-container::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+.sub-container::-webkit-scrollbar
+{
+	width: 3px;
+	background-color: #F5F5F5;
+}
+.sub-container::-webkit-scrollbar-thumb
+{
+	background-color: rgb(252,177,155);
+}
+
+
+.sub-container>:first-child{
+    grid-column: auto / span 2;
+}
+
+.sub-container>.card{
+    margin: 10px;
+}
+
+.edit a{
+    text-decoration: none;
+    color:black;
+}
+
+.edit a:hover{
+    text-decoration: none;
+    color:purple;
+}

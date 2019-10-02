@@ -1,0 +1,211 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'IndustryFinder/home.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'IndustryFinder/circle.css' %}" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+    <title>Student Management System</title>
+</head>
+<body>
+    <main class="grid-container" >
+        <section class="nav">
+            <div class="vertical-menu">
+                <div class="menu-container">
+                    <a href="{% url 'IndustryFinder:student-update' %}"><img src="{% static 'IndustryFinder/undraw_profile_pic_ic5t (1).svg' %}" alt=""></a>
+                    <a href="#home-point" ><i id="home"  class="fa fa-home active"></i></a>
+                    <a href="#academics-point"  ><i id="academics" class="fa fa-university"></i></a>
+                    <a href="#sports-point"  ><i id="sports" class="fa fa-futbol-o "></i></a>
+                    <a href="#technical-point"  ><i id="technical" class="fa fa-code"></i></a>
+                    <a href="#social-point"  ><i id="social" class="fa fa-tree"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="home-container">
+            <div class="edit" id="home-point">
+                <div class="card" id="comp">
+                    <h2>You have a good chance to get placed in {{ b.company }}</h2>
+                </div>
+                <a href="{% url 'IndustryFinder:student-update' %}"> <button>Edit Profile</button> </a>
+                <a href="{% url 'logout' %}"><button>Log out</button></a> 
+            </div>
+            <div class="flex-container" id="home">
+                    <div class="card academics_numeric">
+                            <div class="container">
+                            <div class="academics_icon icon rounded-circle"><i class="fa fa-university"></i></div>
+                            </div>
+                            <div class="card-body"><h1 class="data_numeric">92%</h1></div>
+                            <h4 class="card-title">Academics</h4>
+                        </div>
+                        <div class="card sports_numeric">
+                            <div class="container">
+                            <div class="sports_icon icon "><i class="fa fa-futbol-o"></i></div>
+                            </div>
+                            <div class="card-body"><h1 class="data_numeric">65%</h1></div>
+                            <h4 class="card-title">Sports</h4>
+                        </div>
+                        <div class="card technical_numeric">
+                            <div class="container">
+                            <div class="technical_icon icon"><i class="fa fa-code"></i></div>
+                            </div>
+                            <div class="card-body"><h1 class="data_numeric">86%</h1></div>
+                            <h4 class="card-title">Technical</h4>
+                        </div>
+                        <div class="card social_numeric">
+                            <div class="container">
+                            <div class="social_icon icon"><i class="fa fa-tree"></i></div>
+                            </div>
+                            <div class="card-body"><h1 class="data_numeric">72%</h1></div>
+                            <h4 class="card-title">Social</h4>
+                        </div>
+            </div>
+            <div class="section-grid-container">
+                <div class="Academics sub-container" id="academics-point" >
+                    <div class="card">
+                        <h4 class="card-title">Scatter Plot of 10th and 12marks</h4>
+                        <div id="academics-1"></div>
+                    </div>
+                    <div class="card">
+                        <h4 class="card-title">Comparison Plot of Marks</h4>
+                        <div id="academics-2"></div>
+                        
+                    </div>
+                    <div class="card">
+                        <h4 class="card-title">Comparison Plot of Marks</h4>
+                        <img class="card-img-top" src="plot_00.png" alt="Overall analysis plot">
+                        
+                    </div>
+                </div>
+                <div class="Academics-ovr">
+                    <!-- <div class="card"> -->
+                        
+                        
+                        <div class="c100 p92 big">
+                    
+                              <span>92%</span>
+                            
+                              <div class="slice">
+                            
+                                <div class="bar"></div>
+                            
+                                <div class="fill"></div>
+                            
+                              </div>
+                            
+                            </div>
+
+                            
+                        
+                    <!-- </div> -->
+                </div>
+                <div class="Sports sub-container" id="sports-point" >
+                    <div class="card">
+                        <h4 class="card-title">Comparison Plot of Sports Participation</h4>
+                        <div id="sports-1"></div>
+                        
+                    </div>
+                </div>
+                <div class="Sports-ovr">
+                    <!-- <div class="card"> -->
+                       
+                        <div class="c100 p65 big orange">
+                    
+                            <span>65%</span>
+                          
+                            <div class="slice">
+                          
+                              <div class="bar"></div>
+                          
+                              <div class="fill"></div>
+                          
+                            </div>
+                          
+                          </div>
+
+                          
+                       
+                    <!-- </div> -->
+                </div>
+                <div class="Technical sub-container" id="technical-point" >
+                    <div class="card">
+                        <h4 class="card-title">Scatter Plot of Hackathons and Internships</h4>
+                        <div id="technical-1"></div>
+                       
+                    </div>
+                    <div class="card">
+                        <h4 class="card-title">Scatter Plot of Hackathons and Projects</h4>
+                        <div id="technical-2"></div>
+                       
+                    </div>
+                    <div class="card">
+                        <h4 class="card-title">Projects</h4>
+                        <div id="technical-3"></div>
+                        
+                    </div>
+                </div>
+                <div class="Technical-ovr">
+                    <!-- <div class="card"> -->
+                    
+                        <div class="c100 p86 big green">
+                    
+                            <span>86%</span>
+                          
+                            <div class="slice">
+                          
+                              <div class="bar"></div>
+                          
+                              <div class="fill"></div>
+                          
+                            </div>
+                          
+                          </div>
+
+                          
+                        
+                    <!-- </div> -->
+                </div>
+                <div class="Social sub-container" id="social-point" >
+                    <div class="card">
+                        <h4 class="card-title">Comparison plot of Social Work</h4>
+                        <div id="social-1"></div>
+                        
+                    </div>
+                </div>
+                <div class="Social-ovr">
+                    <!-- <div class="card"> -->
+                        
+                        <div class="c100 p72 big ">
+                    
+                            <span>72%</span>
+                          
+                            <div class="slice">
+                          
+                              <div class="bar"></div>
+                          
+                              <div class="fill"></div>
+                          
+                            </div>
+                          
+                          </div>
+
+                        <div class="hidden" id="student0" data_student="{{ a }}" > </div>
+                        <div class="hidden" id="student5" data_student="{{ b.company }}" > </div>
+                        <div class="hidden" id="student6" data_student="{{ b.meandf2 }}" > </div>
+                        <div class="hidden" id="student7" data_student="{{ b.maxdf2 }}" > </div>
+                        <div class="hidden" id="student8" data_student="{{ b.scatter }}" > </div>
+                        
+                    <!-- </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="{% static 'IndustryFinder/main.js' %}"></script>

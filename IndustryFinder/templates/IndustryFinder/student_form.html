@@ -1,0 +1,164 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'IndustryFinder/student_form.css' %}" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Profile</title>
+</head>
+<body>
+    <a href="{% url 'IndustryFinder:home' %}"><button>Back to Home</button><a>
+    <form action="{% url 'IndustryFinder:save-student-data' %}" method="post" enctype = "multipart/form-data">
+	{% csrf_token %}
+    <div class="academics_details card academics_card">
+        <div class="container">
+            <div class="academics_icon"><i class="fa fa-university"></i></div>
+        </div>
+        <h2 class="card-title">Academics</h2>
+        <hr>
+        <div class="card-body">
+            <div class="flex-container">
+            <div class="form-group left">
+                <label for="mOS">Marks obtained in 10th:</label>
+                <input required type = "text" value = '{{ student.academics.Marks_10 }}' name = "Marks_10" class="form-control" id = "mOS" />
+            </div>
+            <div class="form-group right">
+                <label for="mMS">Max. marks of 10th:</label>
+                <input required type = "text" value = '500' name = "Marks_10_max" class="form-control" id = "mMS" />
+            </div>
+            </div>
+            <div class="flex-container">
+                <div class="form-group left">
+                    <label for="mOH">Marks obtained in 12th:</label>
+                    <input required type = "text" value = '{{ student.academics.Marks_12 }}' name = "Marks_12" class="form-control" id = "mOH" />
+                </div>
+                <div class="form-group right">
+                    <label for="mMH">Max. marks of 12th:</label>
+                    <input required type = "text" value = '650' name = "Marks_12_max" class="form-control" id = "mMH" />
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="form-group mid">
+                    <label for="cGPA">Avg CGPA obtained:</label>
+                    <input required type = "text" value = '{{ student.academics.Marks_CGPA }}' name = "Marks_CGPA" class="form-control" id = "cGPA" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sports_details card sports_card">
+        <div class="container">
+            <div class="sports_icon "><i class="fa fa-futbol-o"></i></div>
+        </div>
+        <h2 class="card-title">Sports</h2>
+        <hr>
+        <div class="card-body">
+            <div class="regional">
+                <h4>Regional</h4>
+                <hr>
+                <div class="flex-container">
+                    <div class="form-group">
+                        <label for="nORG">No. of Regional Golds:</label>
+                        <input required type = "number" class="form-control" id = "nORG" value = '{{ student.sports.R_Gold }}' name = "R_Gold"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="nORS">No. of Regional Silver:</label>
+                        <input required type = "number" class="form-control" id = "nORS" value = '{{ student.sports.R_Silver }}' name = "R_Silver"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="nORB">No. of Regional Bronze:</label>
+                        <input required type = "number" class="form-control" id = "nORB" value = '{{ student.sports.R_Bronze }}' name = "R_Bronze"/>
+                    </div>
+                </div>
+            </div>
+            <div class="state">
+                <hr>
+                <h4>State</h4>
+                <hr>
+                <div class="flex-container">
+                    <div class="form-group">
+                        <label for="nOSG">No. of State Golds:</label>
+                        <input required type = "number" class="form-control" id = "nOSG" value = '{{ student.sports.S_Gold }}' name = "S_Gold"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="nOSS">No. of State Silvers:</label>
+                        <input required type = "number" class="form-control" id = "nOSS" value = '{{ student.sports.S_Silver }}' name = "S_Silver"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="nOSB">No. of State Bronzes:</label>
+                        <input required type = "number" class="form-control" id = "nOSB" value = '{{ student.sports.S_Bronze }}' name = "S_Bronze"/>
+                    </div>
+                </div>
+            </div>
+                <div class="national">
+                    <hr>
+                    <h4>National</h4>
+                    <hr>
+                    <div class="flex-container">
+                        <div class="form-group">
+                            <label for="nONG">No. of National Golds:</label>
+                            <input required type = "number" class="form-control" id = "nONG" value = '{{ student.sports.N_Gold }}' name = "N_Gold"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="nONS">No. of National Silver:</label>
+                            <input required type = "number" class="form-control" id = "nONS" value = '{{ student.sports.N_Silver }}' name = "N_Silver"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="nONB">No. of National Bronze:</label>
+                            <input required type = "number" class="form-control" id = "nONB" value = '{{ student.sports.N_Bronze }}' name = "N_Bronze"/>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="technical_details card technical_card">
+        <div class="container">
+            <div class="technical_icon"><i class="fa fa-code"></i></div>
+        </div>
+        <h2 class="card-title">Technical</h2>
+        <hr>
+        <div class="card-body">
+            <div class="flex-container">
+                <div class="form-group left">
+                    <label for="nOH">No. of Hackathons:</label>
+                    <input required type = "number" name = "Hackathons" class="form-control" id = "nOH" value = '{{ student.technical.Hackathons }}'/>
+                </div>
+                <div class="form-group right">
+                        <label for="nORP">No. of Research Papers:</label>
+                        <input required type = "number" name = "Research" class="form-control" id = "nORP" value = '{{ student.technical.Research }}'/>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="form-group left">
+                        <label for="nOP">No. of Projects:</label>
+                        <input required type = "number" name = "Projects" class="form-control" id = "nOP" value = '{{ student.technical.Projects }}'/>
+                </div>
+                <div class="form-group right">
+                        <label for="nOI">No. of Internships:</label>
+                        <input required type = "number" name = "Internships" class="form-control" id = "nOI" value = '{{ student.technical.Internships }}'/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="social_details card social_card">
+        <div class="container">
+            <div class="social_icon"><i class="fa fa-tree"></i></div>
+        </div>
+        <h2 class="card-title">Social</h2>
+        <hr>
+        <div class="flex-container">
+            <div class="form-group mid">
+                    <label for="nOSH">No. of Social Hours:</label>
+                    <input required type = "text" value = '{{ student.social }}' name = "Social_Hours" class="form-control" id = "nOSH" />
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="submit-btn">Submit</button>
+</form>
+</body>
+</html>
