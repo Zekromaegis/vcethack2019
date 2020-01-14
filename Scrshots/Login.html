@@ -1,0 +1,43 @@
+
+<!-- saved from url=(0043)http://127.0.0.1:8000/IndustryFinder/login/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./Login_files/login.css">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login | IndustryFinder</title>
+    <link rel="stylesheet" href="./Login_files/bootstrap.min.css">
+    <script src="./Login_files/jquery.min.js.download"></script>
+    <script src="./Login_files/bootstrap.min.js.download"></script>
+</head>
+<body>
+    <div class="login-card">
+        <div class="account">
+            <h2 class="title">Login</h2>
+            <div class="body ">
+                <form class="login_form" action="http://127.0.0.1:8000/IndustryFinder/login/" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="7VBAfiWff4zC8UlHgkkja7l3wzwzxdoijSoScPzL8DHL63Nwfkhm8K7ePVRNDGXw">
+                    <div class="form-group">
+                        <label for="usr">Username:</label>
+                        <input type="text" name="username" class="form-control" id="usr"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" name="password" class="form-control" id="pwd"><br>
+                    </div>
+                    <button type="submit" class="btn btn-primary">SIGN IN</button>
+                </form>
+             </div>
+        </div>
+        <div class="image">
+            <div>
+                <span class="alredy-acc">Dont have an account?</span>
+                <span><button type="submit" class="btn info"><a id="Nolink" href="http://127.0.0.1:8000/IndustryFinder/signup/">SIGN UP</a></button></span>
+            </div>
+            <img class="login_img" src="./Login_files/undraw_predictive_analytics_kf9n (2).svg" alt="Login Image">
+        </div>
+    </div>
+
+
+
+</body></html>

@@ -1,0 +1,161 @@
+.card{
+    padding: 10px;
+    margin : 40px;
+    margin-left : 125px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    transition: 0.3s;
+    border-radius: 20px; 
+}
+
+.profile_nav{
+    padding : 10px;
+    margin-left : 0;
+    width : 20%;
+    height : 40%;
+    background-color : lightgray;
+}
+
+a button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 5px;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(253,165,137); 
+    border: 1px solid plum;
+    border-radius: 25px;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+ a:hover{
+    text-decoration: none;
+    color:purple;
+}
+
+.card-title{
+    text-align : center;
+    font-size : 30px;
+}
+
+/* .card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+} */
+
+.academics_card:hover{
+    box-shadow: 0 4px 4px 0 rgb(15,135,254) !important;
+}
+
+.sports_card:hover{
+    box-shadow: 0 4px 4px 0 rgb(145,117,254) !important;
+}
+
+.technical_card:hover{
+    box-shadow: 0 4px 4px 0 rgb(252,199,62) !important;
+}
+
+.social_card:hover{
+    box-shadow: 0 4px 4px 0 rgb(70,209,78) !important;
+}
+
+.card-body{
+    padding: 4px 16px;
+    text-align: left;
+}
+
+input[type=radio]{
+    width : 70%;
+    display : inline;
+    height : 1em;
+}
+
+input[type=number]{
+    width : 70%;
+    height : 2em;
+}
+
+input[type=text]{
+    width : 70%;
+    height : 2em;
+}
+
+.academics_icon{
+    height : 25px;
+    width : 25px;
+    background-color : rgb(223,244,254);
+    border-radius : 50%;
+    display : inline-block;
+    color : rgb(15,135,254);
+    padding-left : 4px;
+}
+
+.sports_icon{
+    height : 25px;
+    width : 25px;
+    background-color : rgb(243,241,255);
+    border-radius : 50%;
+    display : inline-block;
+    color : rgb(145,117,254);
+    padding-left : 4px;
+}
+
+.technical_icon{
+    height : 25px;
+    width : 25px;
+    background-color : rgb(252,249,235);
+    border-radius : 50%;
+    display : inline-block;
+    color : rgb(252,199,62);
+    padding-left : 4px;
+}
+
+.social_icon{
+    height : 25px;
+    width : 25px;
+    background-color : rgb(240,246,235);
+    border-radius : 50%;
+    display : inline-block;
+    color : rgb(70,209,78);
+    padding-left : 5px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.label{
+    color : rgb(187, 192, 196);
+}
+
+input:focus{
+    outline : none !important;
+    border : 1px solid gray;
+}
+
+.left{
+    margin-left : 20%;
+}
+
+.right{
+    margin-right : 20%;
+}
+
+.mid{
+    margin-left : 40%;
+}
+
+.submit-btn{
+    background-color : green;
+    color : white;
+    margin-bottom : 10%;
+    margin-left : 50%;
+}
